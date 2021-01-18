@@ -32,10 +32,10 @@ namespace PrisonDB.Helpers
             dgv.Columns["Surname"].HeaderText = "Фамилия";
             dgv.Columns["Patronymic"].HeaderText = "Отчество";
             dgv.Columns["Birthday"].HeaderText = "Дата Рождения";
-            dgv.Columns["Gender_id"].Visible = true;
-            dgv.Columns["Comment_id"].Visible = true;
-            dgv.Columns["Article_id"].Visible = true;
-            dgv.Columns["Cell_id"].Visible = true;
+            dgv.Columns["Gender_id"].Visible = false;
+            dgv.Columns["Comment_id"].Visible = false;
+            dgv.Columns["Article_id"].Visible = false;
+            dgv.Columns["Cell_id"].HeaderText = "Номер камеры";
             dgv.Columns["Gender"].HeaderText = "Пол";
             dgv.Columns["ArticleNum"].HeaderText = "Номер статьи";
             dgv.Columns["ArtName"].HeaderText = "Название статьи";

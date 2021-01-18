@@ -26,10 +26,10 @@ namespace PrisonDB.Forms
                 tbSurname.Text = prisoner.Surname;
                 tbPatronymic.Text = prisoner.Patronymic;
                 dtpBirth.Value = prisoner.Birthday;
-                tbArticle.Text = prisoner.ArticleNum.ToString();
-                cbGender.SelectedItem = prisoner.Gender.ToString();
+                cbArticle.SelectedItem = prisoner.Article_id;
+                cbGender.SelectedItem = prisoner.Gender_id;
                 tbComment.Text = prisoner.Comment;
-                tbCamNum.Text = prisoner.Cell_id.ToString();
+                cbCamNum.SelectedItem = prisoner.Cell_id;
             }
             else
             {
@@ -43,10 +43,10 @@ namespace PrisonDB.Forms
             tbName.Clear();
             tbSurname.Clear();
             tbPatronymic.Clear();
-            tbArticle.Clear();
             cbGender.SelectedIndex = -1;
+            cbArticle.SelectedIndex = -1;
+            cbCamNum.SelectedIndex = -1;
             tbComment.Clear();
-            tbCamNum.Clear();
             dtpBirth.Value = DateTime.Now;
             
         }
@@ -61,8 +61,9 @@ namespace PrisonDB.Forms
             prisoner.Name = tbName.Text.Trim();
             prisoner.Surname = tbSurname.Text.Trim();
             prisoner.Patronymic = tbPatronymic.Text.Trim();
-            prisoner.Gender = cbGender.SelectedItem.ToString();
-            prisoner.Article_id = int.Parse(tbArticle.Text);
+            prisoner.Gender_id = cbGender.SelectedIndex; 
+            prisoner.Article_id = cbArticle.SelectedIndex; 
+            prisoner.Cell_id = cbCamNum.SelectedIndex; 
             prisoner.Comment= tbComment.Text.Trim();
             DialogResult = DialogResult.OK;
             prisoner.Birthday= dtpBirth.Value;
@@ -95,8 +96,13 @@ namespace PrisonDB.Forms
 
         private void UserForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "prisonDataSet2.BDCell". При необходимости она может быть перемещена или удалена.
+            this.bDCellTableAdapter.Fill(this.prisonDataSet2.BDCell);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "prisonDataSet1.Article". При необходимости она может быть перемещена или удалена.
+            this.articleTableAdapter.Fill(this.prisonDataSet1.Article);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "prisonDataSet.Gender". При необходимости она может быть перемещена или удалена.
             this.genderTableAdapter.Fill(this.prisonDataSet.Gender);
+
 
         }
 
@@ -106,6 +112,11 @@ namespace PrisonDB.Forms
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCamNum_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -71,6 +71,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>prisonDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="prisonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prisonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="prisonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prisonDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DBUtils\SqlModelReader.cs" />
@@ -99,6 +109,28 @@
     </None>
     <None Include="prisonDataSet.xss">
       <DependentUpon>prisonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="prisonDataSet1.xsc">
+      <DependentUpon>prisonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="prisonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>prisonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="prisonDataSet1.xss">
+      <DependentUpon>prisonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="prisonDataSet2.xsc">
+      <DependentUpon>prisonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="prisonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>prisonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="prisonDataSet2.xss">
+      <DependentUpon>prisonDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,17 +20,17 @@ namespace KostrubaDB {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("prisonDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("prisonDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class prisonDataSet : global::System.Data.DataSet {
+    public partial class prisonDataSet2 : global::System.Data.DataSet {
         
-        private GenderDataTable tableGender;
+        private BDCellDataTable tableBDCell;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public prisonDataSet() {
+        public prisonDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace KostrubaDB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected prisonDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected prisonDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace KostrubaDB {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Gender"] != null)) {
-                    base.Tables.Add(new GenderDataTable(ds.Tables["Gender"]));
+                if ((ds.Tables["BDCell"] != null)) {
+                    base.Tables.Add(new BDCellDataTable(ds.Tables["BDCell"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace KostrubaDB {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GenderDataTable Gender {
+        public BDCellDataTable BDCell {
             get {
-                return this.tableGender;
+                return this.tableBDCell;
             }
         }
         
@@ -127,7 +127,7 @@ namespace KostrubaDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            prisonDataSet cln = ((prisonDataSet)(base.Clone()));
+            prisonDataSet2 cln = ((prisonDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace KostrubaDB {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Gender"] != null)) {
-                    base.Tables.Add(new GenderDataTable(ds.Tables["Gender"]));
+                if ((ds.Tables["BDCell"] != null)) {
+                    base.Tables.Add(new BDCellDataTable(ds.Tables["BDCell"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace KostrubaDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGender = ((GenderDataTable)(base.Tables["Gender"]));
+            this.tableBDCell = ((BDCellDataTable)(base.Tables["BDCell"]));
             if ((initTable == true)) {
-                if ((this.tableGender != null)) {
-                    this.tableGender.InitVars();
+                if ((this.tableBDCell != null)) {
+                    this.tableBDCell.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace KostrubaDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "prisonDataSet";
+            this.DataSetName = "prisonDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/prisonDataSet.xsd";
+            this.Namespace = "http://tempuri.org/prisonDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGender = new GenderDataTable();
-            base.Tables.Add(this.tableGender);
+            this.tableBDCell = new BDCellDataTable();
+            base.Tables.Add(this.tableBDCell);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeGender() {
+        private bool ShouldSerializeBDCell() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace KostrubaDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            prisonDataSet ds = new prisonDataSet();
+            prisonDataSet2 ds = new prisonDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,25 @@ namespace KostrubaDB {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void GenderRowChangeEventHandler(object sender, GenderRowChangeEvent e);
+        public delegate void BDCellRowChangeEventHandler(object sender, BDCellRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GenderDataTable : global::System.Data.TypedTableBase<GenderRow> {
+        public partial class BDCellDataTable : global::System.Data.TypedTableBase<BDCellRow> {
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnCapacity;
             
-            private global::System.Data.DataColumn columnGender_id;
+            private global::System.Data.DataColumn columnCell_id;
+            
+            private global::System.Data.DataColumn columnCorps_number;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderDataTable() {
-                this.TableName = "Gender";
+            public BDCellDataTable() {
+                this.TableName = "BDCell";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +296,7 @@ namespace KostrubaDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal GenderDataTable(global::System.Data.DataTable table) {
+            internal BDCellDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +313,32 @@ namespace KostrubaDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected GenderDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BDCellDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn CapacityColumn {
                 get {
-                    return this.columnName;
+                    return this.columnCapacity;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Gender_idColumn {
+            public global::System.Data.DataColumn Cell_idColumn {
                 get {
-                    return this.columnGender_id;
+                    return this.columnCell_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Corps_numberColumn {
+                get {
+                    return this.columnCorps_number;
                 }
             }
             
@@ -343,53 +353,54 @@ namespace KostrubaDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRow this[int index] {
+            public BDCellRow this[int index] {
                 get {
-                    return ((GenderRow)(this.Rows[index]));
+                    return ((BDCellRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GenderRowChangeEventHandler GenderRowChanging;
+            public event BDCellRowChangeEventHandler BDCellRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GenderRowChangeEventHandler GenderRowChanged;
+            public event BDCellRowChangeEventHandler BDCellRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GenderRowChangeEventHandler GenderRowDeleting;
+            public event BDCellRowChangeEventHandler BDCellRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event GenderRowChangeEventHandler GenderRowDeleted;
+            public event BDCellRowChangeEventHandler BDCellRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddGenderRow(GenderRow row) {
+            public void AddBDCellRow(BDCellRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRow AddGenderRow(string Name) {
-                GenderRow rowGenderRow = ((GenderRow)(this.NewRow()));
+            public BDCellRow AddBDCellRow(int Capacity, int Corps_number) {
+                BDCellRow rowBDCellRow = ((BDCellRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Name,
-                        null};
-                rowGenderRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGenderRow);
-                return rowGenderRow;
+                        Capacity,
+                        null,
+                        Corps_number};
+                rowBDCellRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBDCellRow);
+                return rowBDCellRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRow FindByGender_id(int Gender_id) {
-                return ((GenderRow)(this.Rows.Find(new object[] {
-                            Gender_id})));
+            public BDCellRow FindByCell_id(int Cell_id) {
+                return ((BDCellRow)(this.Rows.Find(new object[] {
+                            Cell_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GenderDataTable cln = ((GenderDataTable)(base.Clone()));
+                BDCellDataTable cln = ((BDCellDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,58 +408,60 @@ namespace KostrubaDB {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GenderDataTable();
+                return new BDCellDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnName = base.Columns["Name"];
-                this.columnGender_id = base.Columns["Gender_id"];
+                this.columnCapacity = base.Columns["Capacity"];
+                this.columnCell_id = base.Columns["Cell_id"];
+                this.columnCorps_number = base.Columns["Corps_number"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
-                this.columnGender_id = new global::System.Data.DataColumn("Gender_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGender_id);
+                this.columnCapacity = new global::System.Data.DataColumn("Capacity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCapacity);
+                this.columnCell_id = new global::System.Data.DataColumn("Cell_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCell_id);
+                this.columnCorps_number = new global::System.Data.DataColumn("Corps_number", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorps_number);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnGender_id}, true));
-                this.columnName.MaxLength = 100;
-                this.columnGender_id.AutoIncrement = true;
-                this.columnGender_id.AutoIncrementSeed = -1;
-                this.columnGender_id.AutoIncrementStep = -1;
-                this.columnGender_id.AllowDBNull = false;
-                this.columnGender_id.ReadOnly = true;
-                this.columnGender_id.Unique = true;
+                                this.columnCell_id}, true));
+                this.columnCell_id.AutoIncrement = true;
+                this.columnCell_id.AutoIncrementSeed = -1;
+                this.columnCell_id.AutoIncrementStep = -1;
+                this.columnCell_id.AllowDBNull = false;
+                this.columnCell_id.ReadOnly = true;
+                this.columnCell_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRow NewGenderRow() {
-                return ((GenderRow)(this.NewRow()));
+            public BDCellRow NewBDCellRow() {
+                return ((BDCellRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GenderRow(builder);
+                return new BDCellRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GenderRow);
+                return typeof(BDCellRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GenderRowChanged != null)) {
-                    this.GenderRowChanged(this, new GenderRowChangeEvent(((GenderRow)(e.Row)), e.Action));
+                if ((this.BDCellRowChanged != null)) {
+                    this.BDCellRowChanged(this, new BDCellRowChangeEvent(((BDCellRow)(e.Row)), e.Action));
                 }
             }
             
@@ -456,8 +469,8 @@ namespace KostrubaDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GenderRowChanging != null)) {
-                    this.GenderRowChanging(this, new GenderRowChangeEvent(((GenderRow)(e.Row)), e.Action));
+                if ((this.BDCellRowChanging != null)) {
+                    this.BDCellRowChanging(this, new BDCellRowChangeEvent(((BDCellRow)(e.Row)), e.Action));
                 }
             }
             
@@ -465,8 +478,8 @@ namespace KostrubaDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GenderRowDeleted != null)) {
-                    this.GenderRowDeleted(this, new GenderRowChangeEvent(((GenderRow)(e.Row)), e.Action));
+                if ((this.BDCellRowDeleted != null)) {
+                    this.BDCellRowDeleted(this, new BDCellRowChangeEvent(((BDCellRow)(e.Row)), e.Action));
                 }
             }
             
@@ -474,14 +487,14 @@ namespace KostrubaDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GenderRowDeleting != null)) {
-                    this.GenderRowDeleting(this, new GenderRowChangeEvent(((GenderRow)(e.Row)), e.Action));
+                if ((this.BDCellRowDeleting != null)) {
+                    this.BDCellRowDeleting(this, new BDCellRowChangeEvent(((BDCellRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveGenderRow(GenderRow row) {
+            public void RemoveBDCellRow(BDCellRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -490,7 +503,7 @@ namespace KostrubaDB {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                prisonDataSet ds = new prisonDataSet();
+                prisonDataSet2 ds = new prisonDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -508,7 +521,7 @@ namespace KostrubaDB {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GenderDataTable";
+                attribute2.FixedValue = "BDCellDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -552,54 +565,82 @@ namespace KostrubaDB {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GenderRow : global::System.Data.DataRow {
+        public partial class BDCellRow : global::System.Data.DataRow {
             
-            private GenderDataTable tableGender;
+            private BDCellDataTable tableBDCell;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal GenderRow(global::System.Data.DataRowBuilder rb) : 
+            internal BDCellRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGender = ((GenderDataTable)(this.Table));
+                this.tableBDCell = ((BDCellDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Name {
+            public int Capacity {
                 get {
                     try {
-                        return ((string)(this[this.tableGender.NameColumn]));
+                        return ((int)(this[this.tableBDCell.CapacityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Name\' в таблице \'Gender\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Capacity\' в таблице \'BDCell\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGender.NameColumn] = value;
+                    this[this.tableBDCell.CapacityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Gender_id {
+            public int Cell_id {
                 get {
-                    return ((int)(this[this.tableGender.Gender_idColumn]));
+                    return ((int)(this[this.tableBDCell.Cell_idColumn]));
                 }
                 set {
-                    this[this.tableGender.Gender_idColumn] = value;
+                    this[this.tableBDCell.Cell_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNameNull() {
-                return this.IsNull(this.tableGender.NameColumn);
+            public int Corps_number {
+                get {
+                    try {
+                        return ((int)(this[this.tableBDCell.Corps_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Corps_number\' в таблице \'BDCell\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBDCell.Corps_numberColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNameNull() {
-                this[this.tableGender.NameColumn] = global::System.Convert.DBNull;
+            public bool IsCapacityNull() {
+                return this.IsNull(this.tableBDCell.CapacityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCapacityNull() {
+                this[this.tableBDCell.CapacityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCorps_numberNull() {
+                return this.IsNull(this.tableBDCell.Corps_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCorps_numberNull() {
+                this[this.tableBDCell.Corps_numberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -607,22 +648,22 @@ namespace KostrubaDB {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class GenderRowChangeEvent : global::System.EventArgs {
+        public class BDCellRowChangeEvent : global::System.EventArgs {
             
-            private GenderRow eventRow;
+            private BDCellRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRowChangeEvent(GenderRow row, global::System.Data.DataRowAction action) {
+            public BDCellRowChangeEvent(BDCellRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GenderRow Row {
+            public BDCellRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -638,7 +679,7 @@ namespace KostrubaDB {
         }
     }
 }
-namespace KostrubaDB.prisonDataSetTableAdapters {
+namespace KostrubaDB.prisonDataSet2TableAdapters {
     
     
     /// <summary>
@@ -650,7 +691,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GenderTableAdapter : global::System.ComponentModel.Component {
+    public partial class BDCellTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -664,7 +705,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public GenderTableAdapter() {
+        public BDCellTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -761,35 +802,41 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Gender";
-            tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("Gender_id", "Gender_id");
+            tableMapping.DataSetTable = "BDCell";
+            tableMapping.ColumnMappings.Add("Capacity", "Capacity");
+            tableMapping.ColumnMappings.Add("Cell_id", "Cell_id");
+            tableMapping.ColumnMappings.Add("Corps_number", "Corps_number");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Gender] WHERE (((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Nam" +
-                "e] = @Original_Name)) AND ([Gender_id] = @Original_Gender_id))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[BDCell] WHERE (((@IsNull_Capacity = 1 AND [Capacity] IS NULL) OR ([Capacity] = @Original_Capacity)) AND ([Cell_id] = @Original_Cell_id) AND ((@IsNull_Corps_number = 1 AND [Corps_number] IS NULL) OR ([Corps_number] = @Original_Corps_number)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Gender_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cell_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cell_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Gender] ([Name]) VALUES (@Name);\r\nSELECT Name, Gender_id FROM " +
-                "Gender WHERE (Gender_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[BDCell] ([Capacity], [Corps_number]) VALUES (@Capacity, @Corps" +
+                "_number);\r\nSELECT Capacity, Cell_id, Corps_number FROM BDCell WHERE (Cell_id = S" +
+                "COPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Gender] SET [Name] = @Name WHERE (((@IsNull_Name = 1 AND [Name] IS " +
-                "NULL) OR ([Name] = @Original_Name)) AND ([Gender_id] = @Original_Gender_id));\r\nS" +
-                "ELECT Name, Gender_id FROM Gender WHERE (Gender_id = @Gender_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[BDCell] SET [Capacity] = @Capacity, [Corps_number] = @Corps_number WHERE (((@IsNull_Capacity = 1 AND [Capacity] IS NULL) OR ([Capacity] = @Original_Capacity)) AND ([Cell_id] = @Original_Cell_id) AND ((@IsNull_Corps_number = 1 AND [Corps_number] IS NULL) OR ([Corps_number] = @Original_Corps_number)));
+SELECT Capacity, Cell_id, Corps_number FROM BDCell WHERE (Cell_id = @Cell_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Gender_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gender_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Gender_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cell_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cell_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Corps_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Corps_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cell_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Cell_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -805,7 +852,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Name, Gender_id FROM dbo.Gender";
+            this._commandCollection[0].CommandText = "SELECT Capacity, Cell_id, Corps_number FROM dbo.BDCell";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -813,7 +860,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(prisonDataSet.GenderDataTable dataTable) {
+        public virtual int Fill(prisonDataSet2.BDCellDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -826,9 +873,9 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual prisonDataSet.GenderDataTable GetData() {
+        public virtual prisonDataSet2.BDCellDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            prisonDataSet.GenderDataTable dataTable = new prisonDataSet.GenderDataTable();
+            prisonDataSet2.BDCellDataTable dataTable = new prisonDataSet2.BDCellDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -836,15 +883,15 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(prisonDataSet.GenderDataTable dataTable) {
+        public virtual int Update(prisonDataSet2.BDCellDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(prisonDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Gender");
+        public virtual int Update(prisonDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "BDCell");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -866,16 +913,24 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Name, int Original_Gender_id) {
-            if ((Original_Name == null)) {
+        public virtual int Delete(global::System.Nullable<int> Original_Capacity, int Original_Cell_id, global::System.Nullable<int> Original_Corps_number) {
+            if ((Original_Capacity.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Capacity.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Cell_id));
+            if ((Original_Corps_number.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Corps_number.Value));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Gender_id));
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -896,12 +951,18 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name) {
-            if ((Name == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(global::System.Nullable<int> Capacity, global::System.Nullable<int> Corps_number) {
+            if ((Capacity.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Capacity.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Corps_number.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Corps_number.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -923,23 +984,37 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Original_Name, int Original_Gender_id, int Gender_id) {
-            if ((Name == null)) {
+        public virtual int Update(global::System.Nullable<int> Capacity, global::System.Nullable<int> Corps_number, global::System.Nullable<int> Original_Capacity, int Original_Cell_id, global::System.Nullable<int> Original_Corps_number, int Cell_id) {
+            if ((Capacity.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Capacity.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
-            }
-            if ((Original_Name == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((Corps_number.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Corps_number.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Gender_id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Gender_id));
+            if ((Original_Capacity.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Capacity.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Cell_id));
+            if ((Original_Corps_number.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Corps_number.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Cell_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -960,8 +1035,8 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Original_Name, int Original_Gender_id) {
-            return this.Update(Name, Original_Name, Original_Gender_id, Original_Gender_id);
+        public virtual int Update(global::System.Nullable<int> Capacity, global::System.Nullable<int> Corps_number, global::System.Nullable<int> Original_Capacity, int Original_Cell_id, global::System.Nullable<int> Original_Corps_number) {
+            return this.Update(Capacity, Corps_number, Original_Capacity, Original_Cell_id, Original_Corps_number, Original_Cell_id);
         }
     }
     
@@ -977,7 +1052,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private GenderTableAdapter _genderTableAdapter;
+        private BDCellTableAdapter _bDCellTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -999,12 +1074,12 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public GenderTableAdapter GenderTableAdapter {
+        public BDCellTableAdapter BDCellTableAdapter {
             get {
-                return this._genderTableAdapter;
+                return this._bDCellTableAdapter;
             }
             set {
-                this._genderTableAdapter = value;
+                this._bDCellTableAdapter = value;
             }
         }
         
@@ -1027,9 +1102,9 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._genderTableAdapter != null) 
-                            && (this._genderTableAdapter.Connection != null))) {
-                    return this._genderTableAdapter.Connection;
+                if (((this._bDCellTableAdapter != null) 
+                            && (this._bDCellTableAdapter.Connection != null))) {
+                    return this._bDCellTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1044,7 +1119,7 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._genderTableAdapter != null)) {
+                if ((this._bDCellTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1056,14 +1131,14 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(prisonDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(prisonDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._genderTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bDCellTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BDCell.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._genderTableAdapter.Update(updatedRows));
+                    result = (result + this._bDCellTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1075,13 +1150,13 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(prisonDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(prisonDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._genderTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bDCellTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BDCell.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._genderTableAdapter.Update(addedRows));
+                    result = (result + this._bDCellTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1093,13 +1168,13 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(prisonDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(prisonDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._genderTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bDCellTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BDCell.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._genderTableAdapter.Update(deletedRows));
+                    result = (result + this._bDCellTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1135,15 +1210,15 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(prisonDataSet dataSet) {
+        public virtual int UpdateAll(prisonDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._genderTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._genderTableAdapter.Connection) == false))) {
+            if (((this._bDCellTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._bDCellTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -1179,13 +1254,13 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._genderTableAdapter != null)) {
-                    revertConnections.Add(this._genderTableAdapter, this._genderTableAdapter.Connection);
-                    this._genderTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._genderTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._genderTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._genderTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._genderTableAdapter.Adapter);
+                if ((this._bDCellTableAdapter != null)) {
+                    revertConnections.Add(this._bDCellTableAdapter, this._bDCellTableAdapter.Connection);
+                    this._bDCellTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._bDCellTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._bDCellTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._bDCellTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._bDCellTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1246,9 +1321,9 @@ namespace KostrubaDB.prisonDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._genderTableAdapter != null)) {
-                    this._genderTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._genderTableAdapter]));
-                    this._genderTableAdapter.Transaction = null;
+                if ((this._bDCellTableAdapter != null)) {
+                    this._bDCellTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bDCellTableAdapter]));
+                    this._bDCellTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

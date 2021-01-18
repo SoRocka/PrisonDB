@@ -14,6 +14,7 @@ namespace PrisonDB.Models
         public string Surname { get; set; }
         public string Patronymic { get; set; }
         public DateTime Birthday { get; set; }
+        
         public int Gender_id { get; set; }
         public string Gender { get; set; }
         public int Comment_id { get; set; }
