@@ -36,6 +36,7 @@ namespace PrisonDB.Forms
                 tbPatronymic.Text = prisoner.Patronymic;
                 dtpBirth.Value = prisoner.Birthday;
                 cbArticle.SelectedItem = prisoner.Article_id;
+                cbGender.SelectedIndex = cbGender.FindString(prisoner.Gender.Trim());
                 //cbGender.SelectedItem = prisoner.Gender_id;
                 tbComment.Text = prisoner.Comment;
                 cbCamNum.SelectedItem = prisoner.Cell_id;

@@ -21,8 +21,22 @@ namespace PrisonDB
             {
                 return (T)GetCells(reader);
             }
+            if (typeof(T) == typeof(Gender))
+            {
+                return (T)GetGender(reader);
+            }
             throw new ArgumentException();
             //return default;
+        }
+
+        private static IModel GetGender(SqlDataReader reader)
+        {
+            Gender gender = new Gender()
+            {
+                Gender_id = (Int32)reader["Gender_id"],
+                Name = reader["Name"].ToString().Trim(),
+            };
+            return gender;
         }
 
         private static IModel GetPrisoner(SqlDataReader reader)
@@ -67,5 +81,7 @@ namespace PrisonDB
             };
             return cell;
         }
+
+        
     }
 }
