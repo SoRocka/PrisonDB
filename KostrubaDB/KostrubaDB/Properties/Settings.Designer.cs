@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KostrubaDB.Properties {
+namespace PrisonDB.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

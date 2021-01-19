@@ -41,6 +41,8 @@
             this.tbPatronymic = new System.Windows.Forms.TextBox();
             this.lbSurname = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.prisonDataSet = new PrisonDB.prisonDataSet();
             this.genderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -50,34 +52,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbArticle = new System.Windows.Forms.ComboBox();
+            this.articleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.prisonDataSet1 = new PrisonDB.prisonDataSet1();
             this.articleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prisonDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.articleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbCamNum = new System.Windows.Forms.ComboBox();
+            this.bDCellBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.prisonDataSet2 = new PrisonDB.prisonDataSet2();
             this.bDCellBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bDCellBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prisonDataSet = new KostrubaDB.prisonDataSet();
-            this.genderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.genderTableAdapter = new KostrubaDB.prisonDataSetTableAdapters.GenderTableAdapter();
-            this.prisonDataSet1 = new KostrubaDB.prisonDataSet1();
-            this.articleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.articleTableAdapter = new KostrubaDB.prisonDataSet1TableAdapters.ArticleTableAdapter();
-            this.prisonDataSet2 = new KostrubaDB.prisonDataSet2();
-            this.bDCellBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bDCellTableAdapter = new KostrubaDB.prisonDataSet2TableAdapters.BDCellTableAdapter();
+            this.genderTableAdapter = new PrisonDB.prisonDataSetTableAdapters.GenderTableAdapter();
+            this.articleTableAdapter = new PrisonDB.prisonDataSet1TableAdapters.ArticleTableAdapter();
+            this.bDCellTableAdapter = new PrisonDB.prisonDataSet2TableAdapters.BDCellTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prisonDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpBirth
@@ -121,6 +121,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(406, 22);
             this.tbName.TabIndex = 4;
+            this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // tbSurname
             // 
@@ -203,15 +204,22 @@
             // 
             // cbGender
             // 
-            this.cbGender.DataSource = this.genderBindingSource2;
-            this.cbGender.DisplayMember = "Name";
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Location = new System.Drawing.Point(19, 189);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(404, 24);
             this.cbGender.TabIndex = 16;
-            this.cbGender.ValueMember = "Gender_id";
             this.cbGender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // genderBindingSource2
+            // 
+            this.genderBindingSource2.DataMember = "Gender";
+            this.genderBindingSource2.DataSource = this.prisonDataSet;
+            // 
+            // prisonDataSet
+            // 
+            this.prisonDataSet.DataSetName = "prisonDataSet";
+            this.prisonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -285,6 +293,16 @@
             this.cbArticle.TabIndex = 25;
             this.cbArticle.ValueMember = "Article_id";
             // 
+            // articleBindingSource2
+            // 
+            this.articleBindingSource2.DataMember = "Article";
+            this.articleBindingSource2.DataSource = this.prisonDataSet1;
+            // 
+            // prisonDataSet1
+            // 
+            this.prisonDataSet1.DataSetName = "prisonDataSet1";
+            this.prisonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // articleBindingSource1
             // 
             this.articleBindingSource1.DataMember = "Article";
@@ -305,6 +323,16 @@
             this.cbCamNum.ValueMember = "Cell_id";
             this.cbCamNum.SelectedIndexChanged += new System.EventHandler(this.cbCamNum_SelectedIndexChanged);
             // 
+            // bDCellBindingSource2
+            // 
+            this.bDCellBindingSource2.DataMember = "BDCell";
+            this.bDCellBindingSource2.DataSource = this.prisonDataSet2;
+            // 
+            // prisonDataSet2
+            // 
+            this.prisonDataSet2.DataSetName = "prisonDataSet2";
+            this.prisonDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bDCellBindingSource1
             // 
             this.bDCellBindingSource1.DataMember = "BDCell";
@@ -313,43 +341,13 @@
             // 
             this.bDCellBindingSource.DataMember = "BDCell";
             // 
-            // prisonDataSet
-            // 
-            this.prisonDataSet.DataSetName = "prisonDataSet";
-            this.prisonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genderBindingSource2
-            // 
-            this.genderBindingSource2.DataMember = "Gender";
-            this.genderBindingSource2.DataSource = this.prisonDataSet;
-            // 
             // genderTableAdapter
             // 
             this.genderTableAdapter.ClearBeforeFill = true;
             // 
-            // prisonDataSet1
-            // 
-            this.prisonDataSet1.DataSetName = "prisonDataSet1";
-            this.prisonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articleBindingSource2
-            // 
-            this.articleBindingSource2.DataMember = "Article";
-            this.articleBindingSource2.DataSource = this.prisonDataSet1;
-            // 
             // articleTableAdapter
             // 
             this.articleTableAdapter.ClearBeforeFill = true;
-            // 
-            // prisonDataSet2
-            // 
-            this.prisonDataSet2.DataSetName = "prisonDataSet2";
-            this.prisonDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bDCellBindingSource2
-            // 
-            this.bDCellBindingSource2.DataMember = "BDCell";
-            this.bDCellBindingSource2.DataSource = this.prisonDataSet2;
             // 
             // bDCellTableAdapter
             // 
@@ -386,19 +384,19 @@
             this.Name = "PrisonerForm";
             this.Text = "Добавление заключённого";
             this.Load += new System.EventHandler(this.UserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prisonDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articleBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prisonDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDCellBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,14 +431,14 @@
         private System.Windows.Forms.BindingSource genderBindingSource1;
         private System.Windows.Forms.BindingSource articleBindingSource1;
         private System.Windows.Forms.BindingSource bDCellBindingSource1;
-        private KostrubaDB.prisonDataSet prisonDataSet;
+        private PrisonDB.prisonDataSet prisonDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource2;
-        private KostrubaDB.prisonDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
-        private KostrubaDB.prisonDataSet1 prisonDataSet1;
+        private PrisonDB.prisonDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private PrisonDB.prisonDataSet1 prisonDataSet1;
         private System.Windows.Forms.BindingSource articleBindingSource2;
-        private KostrubaDB.prisonDataSet1TableAdapters.ArticleTableAdapter articleTableAdapter;
-        private KostrubaDB.prisonDataSet2 prisonDataSet2;
+        private PrisonDB.prisonDataSet1TableAdapters.ArticleTableAdapter articleTableAdapter;
+        private PrisonDB.prisonDataSet2 prisonDataSet2;
         private System.Windows.Forms.BindingSource bDCellBindingSource2;
-        private KostrubaDB.prisonDataSet2TableAdapters.BDCellTableAdapter bDCellTableAdapter;
+        private PrisonDB.prisonDataSet2TableAdapters.BDCellTableAdapter bDCellTableAdapter;
     }
 }

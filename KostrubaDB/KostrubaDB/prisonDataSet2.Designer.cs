@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace KostrubaDB {
+namespace PrisonDB {
     
     
     /// <summary>
@@ -679,7 +679,7 @@ namespace KostrubaDB {
         }
     }
 }
-namespace KostrubaDB.prisonDataSet2TableAdapters {
+namespace PrisonDB.prisonDataSet2TableAdapters {
     
     
     /// <summary>
@@ -843,7 +843,7 @@ SELECT Capacity, Cell_id, Corps_number FROM BDCell WHERE (Cell_id = @Cell_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::KostrubaDB.Properties.Settings.Default.prisonConnectionString;
+            this._connection.ConnectionString = global::PrisonDB.Properties.Settings.Default.prisonConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

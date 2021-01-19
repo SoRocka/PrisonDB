@@ -17,6 +17,15 @@ namespace PrisonDB.Forms
         public PrisonerForm(Prisoner prisoner = null)
         {
             InitializeComponent();
+            var list = DAL.GetAll<Gender>();
+            list.Insert(0, new Gender
+            {
+                Gender_id = 0,
+                Name = "Не выбрано"
+            });
+            cbGender.DataSource = list;
+            cbGender.DisplayMember = "Name";
+
             if (prisoner != null)
             {
                 this.prisoner = prisoner;
@@ -27,7 +36,7 @@ namespace PrisonDB.Forms
                 tbPatronymic.Text = prisoner.Patronymic;
                 dtpBirth.Value = prisoner.Birthday;
                 cbArticle.SelectedItem = prisoner.Article_id;
-                cbGender.SelectedItem = prisoner.Gender_id;
+                //cbGender.SelectedItem = prisoner.Gender_id;
                 tbComment.Text = prisoner.Comment;
                 cbCamNum.SelectedItem = prisoner.Cell_id;
             }
@@ -117,6 +126,11 @@ namespace PrisonDB.Forms
         }
 
         private void cbCamNum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbName_TextChanged(object sender, EventArgs e)
         {
 
         }
